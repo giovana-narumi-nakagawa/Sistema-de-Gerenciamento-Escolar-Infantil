@@ -1,0 +1,21 @@
+{
+  "name": "sistema-gerenciamento-escolar-infantil",
+  "version": "1.0.0",
+  "description": "Sistema de Gerenciamento Escolar Infantil com Express e Sequelize",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "GNPD",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
+                                                    
