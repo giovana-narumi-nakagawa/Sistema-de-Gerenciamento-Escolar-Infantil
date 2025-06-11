@@ -1,0 +1,43 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: escola-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: .
+      dockerfile: docker/Dockerfiledb
+    container_name: escola-db
+    environment:
+      POSTGRES_DB: escola_infantil
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile-nginx
+    container_name: escola-nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - app
+    volumes:
+      - ./nginx.conf:/etc/nginx/n-nginx.conf:ro
+
+volumes:
+  pgdata:
+
+
+
+

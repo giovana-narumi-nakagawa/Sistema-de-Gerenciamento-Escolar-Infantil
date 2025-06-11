@@ -9,8 +9,8 @@ RUN npm install --production
 COPY app ./app
 
 COPY server.js ./
-COPY config ./config
-COPY routes ./routes
+COPY app/routes ./routes
+
 
 EXPOSE 3000
 
