@@ -32,6 +32,7 @@ O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objeti
 
 ## Estrutura do projeto:
 
+```plaintext
 Sistema-de-Gerenciamento-Escolar-Infantil/
 ├── app/
 │   ├── controllers/
@@ -47,7 +48,7 @@ Sistema-de-Gerenciamento-Escolar-Infantil/
 ├── DockerfileBanco
 ├── docker-compose.yml
 └── README.md
-
+```
 ## Como Instalar/Configurar:
 Guia de Instalação das Ferramentas Necessárias
 Antes de rodar o projeto, você precisa instalar algumas ferramentas fundamentais para garantir que o sistema funcione, o docker e o docker compose.
@@ -97,8 +98,11 @@ Temos alguns exemplos de como você pode testar as rotas usando um cliente HTTP,
 
 Recurso    Método    URL    Exemplo de Uso
 Listar todos os alunos    GET    http://localhost:3000/alunos    Retorna lista de alunos
+
 Cadastrar novo aluno    POST    http://localhost:3000/alunos    Enviar JSON com os dados do aluno
+
 Atualizar um aluno    PUT    http://localhost:3000/alunos/%7Bid%7D    Atualiza aluno com ID específico
+
 Deletar um aluno    DELETE    http://localhost:3000/alunos/%7Bid%7D    Remove aluno com ID específico
 
 ## Contribuição:
