@@ -1,15 +1,18 @@
+const express = require("express");
+const app = express();
+const { swaggerUi, swaggerSpec } = require("./swagger");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 require('dotenv').config();
 const app = require('./app');
 const sequelize = require('./config/database');
 
-// Testa a conexão com o banco e depois inicia o servidor
+
 async function startServer() {
   try {
     await sequelize.authenticate();
     console.log('Conexão com o banco de dados estabelecida com sucesso.');
 
-    // Sincroniza os models com o banco
-    await sequelize.sync(); // ou { force: true } para recriar tabelas (cuidado!)
+    await sequelize.sync();
     console.log('Tabelas sincronizadas.');
 
     const PORT = process.env.PORT || 3000;
