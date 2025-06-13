@@ -106,7 +106,6 @@ Atualizar um aluno    PUT    http://localhost:3000/alunos/%7Bid%7D    Atualiza a
 Deletar um aluno    DELETE    http://localhost:3000/alunos/%7Bid%7D    Remove aluno com ID específico
 
 ## Contribuição:
-Contribuição
 
 Como contribuir
 Fork este repositório para sua conta pessoal no GitHub.
