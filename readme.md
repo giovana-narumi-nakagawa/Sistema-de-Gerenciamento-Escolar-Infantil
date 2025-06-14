@@ -120,8 +120,14 @@ Fork este repositório para sua conta pessoal no GitHub.
 
 Clone o fork para sua máquina local:
 
+```sh
 git clone https://github.com/giovana-narumi-nakagawa/Sistema-de-Gerenciamento-Escolar-Infantil.git
+```
+
+```sh
 cd Sistema-de-Gerenciamento-Escolar-Infantil
+```
+
 Crie uma nova branch para a sua feature ou correção:
 
 ```sh
