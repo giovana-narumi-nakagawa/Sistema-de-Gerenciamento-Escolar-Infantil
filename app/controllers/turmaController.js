@@ -1,4 +1,4 @@
-const Turma = require('../models/turmaModel');
+const Turma = require('../app/models/turmaModel');
 
 exports.getAll = async (req, res) => {
   try {

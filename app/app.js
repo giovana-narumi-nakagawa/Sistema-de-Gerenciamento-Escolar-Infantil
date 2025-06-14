@@ -1,12 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import alunoRoutes from './routes/alunoRoutes.js';
-import atividadeRoutes from './routes/atividadeRoutes.js';
-import chatbotRoutes from './routes/chatbotRoutes.js';
-import presencaRoutes from './routes/presencaRoutes.js';
-import responsavelRoutes from './routes/responsavelRoutes.js';
-import turmaRoutes from './routes/turmaRoutes.js';
-import usuarioRoutes from './routes/usuarioRoutes.js';
+import alunoRoutes from './app/routes/alunoRoutes.js';
+import atividadeRoutes from './app/routes/atividadeRoutes.js';
+import chatbotRoutes from './app/routes/chatbotRoutes.js';
+import presencaRoutes from './app/routes/presencaRoutes.js';
+import responsavelRoutes from './app/routes/responsavelRoutes.js';
+import turmaRoutes from './app/routes/turmaRoutes.js';
+import usuarioRoutes from './app/routes/usuarioRoutes.js';
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from './app/swagger.json' assert { type: "json" };
 

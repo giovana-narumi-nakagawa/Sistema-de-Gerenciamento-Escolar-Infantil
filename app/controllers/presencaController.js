@@ -1,4 +1,4 @@
-const Presenca = require('../models/presencaModel');
+const Presenca = require('../app/models/presencaModel');
 
 exports.getAll = async (req, res) => {
   try {

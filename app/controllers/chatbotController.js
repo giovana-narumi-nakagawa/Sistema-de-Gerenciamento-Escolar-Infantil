@@ -1,4 +1,4 @@
-const Chatbot = require('../models/chatbotModel');
+const Chatbot = require('../app/models/chatbotModel');
 
 exports.getAll = async (req, res) => {
   try {

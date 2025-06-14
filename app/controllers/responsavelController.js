@@ -1,4 +1,4 @@
-const Responsavel = require('../models/responsavelModel');
+const Responsavel = require('../app/models/responsavelModel');
 
 exports.getAll = async (req, res) => {
   try {

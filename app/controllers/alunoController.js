@@ -1,4 +1,4 @@
-const Aluno = require('../models/alunoModel');
+const Aluno = require('../app/models/alunoModel');
 
 exports.getAll = async (req, res) => {
   try {
