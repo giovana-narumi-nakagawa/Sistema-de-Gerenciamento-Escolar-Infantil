@@ -8,7 +8,7 @@ import responsavelRoutes from './routes/responsavelRoutes.js';
 import turmaRoutes from './routes/turmaRoutes.js';
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger.json' assert { type: "json" };
+import swaggerDocument from './app/swagger.json' assert { type: "json" };
 
 dotenv.config();
 
