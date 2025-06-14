@@ -65,10 +65,12 @@ Depois de instalado, reinicie o computador (se solicitado)
 
 Para verificar a instalação, abra o PowerShell ou Prompt de Comando e digite:
 
-
+```sh
 docker --version
+```
 
 Caso apareça a versão do Docker, a instalação deu certo.
+
 ## Como usar:
 Pré-requisitos:
 Ter o Docker e o Docker Compose instalados na máquina.
@@ -76,22 +78,28 @@ Ter o Docker e o Docker Compose instalados na máquina.
 Passo 1: Construindo as Imagens Docker
 Dentro da raiz do projeto (onde está o seu Dockerfile e docker-compose.yml), execute o seguinte comando para construir as imagens:
 
+```sh
 docker-compose build
+```
 
 Passo 2: Subindo os Containers (Backend + Banco de Dados)
 Depois da build, inicie os containers com:
 
+```sh
 docker-compose up
+```
 
 Se quiser rodar os containers em segundo plano:
-
+```sh
 docker-compose up -d
+```
 
 Passo 3: Verificar se o Backend está rodando
 Por padrão, o backend ficará disponível em:
 
+```sh
 http://localhost:3000/
-
+```
 
 Passo 4: Interagindo com as Rotas da API
 Temos alguns exemplos de como você pode testar as rotas usando um cliente HTTP, como por exemplo o Insomnia
@@ -116,12 +124,23 @@ git clone https://github.com/giovana-narumi-nakagawa/Sistema-de-Gerenciamento-Es
 cd Sistema-de-Gerenciamento-Escolar-Infantil
 Crie uma nova branch para a sua feature ou correção:
 
+```sh
 git checkout -b minha-feature
+```
+
 Faça as alterações desejadas, seguindo as diretrizes abaixo.
 Commit suas mudanças com mensagens claras e descritivas:
+
+```sh
 git commit -m "Descrição clara do que foi feito"
+```
+
 Envie as mudanças para o seu fork:
+
+```sh
 git push origin minha-feature
+```
+
 Abra um Pull Request neste repositório principal, detalhando as alterações feitas.
 
 Ambiente de Desenvolvimento Recomendo: Visual Studio Code (VS Code)
