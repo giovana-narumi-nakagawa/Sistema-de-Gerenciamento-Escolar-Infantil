@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import app from './app/app.js';          
-import sequelize from './database/index.js'; 
+import app from './bootstrap/app.js';
+import sequelize from './public/index.js'; 
 
 async function startServer() {
   try {

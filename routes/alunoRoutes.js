@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const controller = require('../controllers/alunoController');
-const authMiddleware = require('../../middleware/auth');
+import { Router } from 'express';
+const router = Router();
+import { getAll, getById, create } from '../app/controllers/alunoController.js';
+import authMiddleware from '../app/middleware/auth.js';
 
 router.use(authMiddleware);
 
@@ -9,6 +9,5 @@ router.get('/', controller.getAll);
 router.get('/:id', controller.getById);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
-router.delete('/:id', controller.delete);
 
-module.exports = router;
+export default router;

@@ -1,28 +1,28 @@
-const Atividade = require('../app/models/atividadeModel');
+import Atividade from '../models/atividadeModel.js';
 
-exports.getAll = async (req, res) => {
+export async function getAll(req, res) {
   try {
     const atividades = await Atividade.findAll();
     res.json(atividades);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao buscar atividades' });
   }
-};
+}
 
-exports.getById = async (req, res) => {
+export async function getById(req, res) {
   try {
     const atividade = await Atividade.findByPk(req.params.id);
     atividade ? res.json(atividade) : res.status(404).json({ error: 'Atividade não encontrada' });
   } catch (error) {
     res.status(500).json({ error: 'Erro ao buscar atividade' });
   }
-};
+}
 
-exports.create = async (req, res) => {
+export async function create(req, res) {
   try {
     const nova = await Atividade.create(req.body);
     res.status(201).json(nova);
   } catch (error) {
     res.status(400).json({ error: 'Erro ao criar atividade' });
   }
-};
+}

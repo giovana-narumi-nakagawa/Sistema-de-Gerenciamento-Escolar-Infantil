@@ -1,10 +1,13 @@
-import authMiddleware from '../../middleware/auth.js';
-const express = require('express');
-const router = express.Router();
-const controller = require('../controllers/atividadeController');
+import { Router } from 'express';
+const router = Router();
+import { getAll, getById, create} from '../app/controllers/atividadeController.js';
+import authMiddleware from '../app/middleware/auth.js';
 
-router.get('/', controller.getAll);
-router.get('/:id', controller.getById);
-router.post('/', controller.create);
+router.use(authMiddleware);
 
-module.exports = router;
+router.get('/', getAll);
+router.get('/:id', getById);
+router.post('/', create);
+router.put('/:id', update);
+
+export default router;
