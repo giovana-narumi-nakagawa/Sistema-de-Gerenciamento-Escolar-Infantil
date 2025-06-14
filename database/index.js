@@ -3,7 +3,6 @@ const app = express();
 
 app.use(express.json());
 
-// Importar as rotas
 app.use('/usuarios', require('./routes/usuarioRouter'));
 app.use('/responsaveis', require('./routes/responsavelRouter'));
 app.use('/alunos', require('./routes/alunoRouter'));
