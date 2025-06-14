@@ -149,7 +149,6 @@ git push origin minha-feature
 
 Abra um Pull Request neste repositório principal, detalhando as alterações feitas.
 
-Ambiente de Desenvolvimento Recomendo: Visual Studio Code (VS Code)
 Para garantir uma experiência consistente e produtiva no desenvolvimento, recomendamos o uso do Visual Studio Code, que utilizamos para escrever e organizar o código do projeto.
 Extensões recomendadas
 ESLint — para garantir a padronização do código e identificar erros
