@@ -1,20 +1,20 @@
 import { Pool } from 'pg';
 import dotenv from 'dotenv';
 
-export default (function () {
+dotenv.config();
 
-    dotenv.config();
+const env = process.env;
 
-    const env = process.env;
+// Debug opcional:
+console.log('Tipo da senha:', typeof env.POSTGRES_PASSWORD);
+console.log('Senha recebida:', env.POSTGRES_PASSWORD);
 
-    const db = new Pool({
-        host: env.POSTGRES_HOST,
-        port: env.POSTGRES_PORT,
-        user: env.POSTGRES_USER,
-        password: env.POSTGRES_PASSWORD,
-        database: env.POSTGRES_DB,
-    });
+const db = new Pool({
+  host: env.POSTGRES_HOST,
+  port: parseInt(env.POSTGRES_PORT, 10) || 5432,         
+  user: env.POSTGRES_USER,
+  password: String(env.POSTGRES_PASSWORD),                 
+  database: env.POSTGRES_DB,
+});
 
-    return db;
-
-})();
+export default db;

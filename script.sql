@@ -1,6 +1,6 @@
 CREATE TABLE Usuario ( id_usuario SERIAL PRIMARY KEY, nome VARCHAR(100) NOT NULL, email VARCHAR(100) UNIQUE NOT NULL, tipo_usuario VARCHAR(50) NOT NULL );
 
- CREATE TABLE Responsavel ( id_responsavel SERIAL PRIMARY KEY, nome_completo VARCHAR(100) NOT NULL, telefone VARCHAR(20), email VARCHAR(100), endereco TEXT );
+CREATE TABLE Responsavel ( id_responsavel SERIAL PRIMARY KEY, nome_completo VARCHAR(100) NOT NULL, telefone VARCHAR(20), email VARCHAR(100), endereco TEXT );
 
 CREATE TABLE Chatbot_Interacao ( id_chatbot_interacao SERIAL PRIMARY KEY, id_responsavel INTEGER NOT NULL REFERENCES Responsavel(id_responsavel), mensagem_usuario TEXT NOT NULL, resposta_chatbot TEXT NOT NULL, data_hora TIMESTAMP NOT NULL );
 
