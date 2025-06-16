@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/sequelize.js');
+import { DataTypes } from 'sequelize';
+import sequelize from '../../config/sequelize.js';
 
 const Responsavel = sequelize.define('Responsavel', {
   nome: {
@@ -20,4 +20,4 @@ const Responsavel = sequelize.define('Responsavel', {
   }
 });
 
-module.exports = Responsavel;
+export default Responsavel;

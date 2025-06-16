@@ -1,6 +1,6 @@
 import { Router } from 'express';
 const router = Router();
-import { getAll, getById, create} from '../app/controllers/presencaController.js';
+import { getAll, getById, create, update } from '../app/controllers/presencaController.js';
 import authMiddleware from '../app/middleware/auth.js';
 
 router.use(authMiddleware);
@@ -11,3 +11,4 @@ router.post('/', create);
 router.put('/:id', update);
 
 export default router;
+

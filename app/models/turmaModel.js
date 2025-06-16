@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/sequelize.js');
+import { DataTypes } from 'sequelize';
+import sequelize from '../../config/sequelize.js';
 
 const Turma = sequelize.define('Turma', {
   nome: {
@@ -16,4 +16,4 @@ const Turma = sequelize.define('Turma', {
   }
 });
 
-module.exports = Turma;
+export default Turma;

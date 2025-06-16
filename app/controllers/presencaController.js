@@ -28,3 +28,18 @@ export async function create(req, res) {
     res.status(400).json({ error: 'Erro ao criar presença' });
   }
 }
+
+export async function update(req, res) {
+  try {
+    const id = req.params.id;
+    const [updated] = await Presenca.update(req.body, { where: { id } });
+    if (updated) {
+      const updatedPresenca = await Presenca.findByPk(id);
+      res.json(updatedPresenca);
+    } else {
+      res.status(404).json({ error: 'Presença não encontrada' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao atualizar presença' });
+  }
+}

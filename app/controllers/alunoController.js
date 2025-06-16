@@ -1,5 +1,5 @@
-const Aluno = require('../models/alunoModel');
-import { findAll, findByPk, create } from '..app/models/alunoModel.js';
+import Aluno from '../models/alunoModel.js';
+
 export async function getAll(req, res) {
   try {
     const alunos = await Aluno.findAll();
@@ -26,4 +26,24 @@ export async function create(req, res) {
     res.status(400).json({ error: 'Erro ao criar aluno' });
   }
 }
+
+// Função update adicionada:
+export async function update(req, res) {
+  try {
+    const [updatedRows] = await Aluno.update(req.body, {
+      where: { id: req.params.id }
+    });
+
+    if (updatedRows === 0) {
+      return res.status(404).json({ error: 'Aluno não encontrado' });
+    }
+
+    const alunoAtualizado = await Aluno.findByPk(req.params.id);
+    res.json(alunoAtualizado);
+  } catch (error) {
+    res.status(400).json({ error: 'Erro ao atualizar aluno' });
+  }
+}
+
+
 

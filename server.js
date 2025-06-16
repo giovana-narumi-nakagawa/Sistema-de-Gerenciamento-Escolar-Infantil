@@ -1,16 +1,11 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
+import db from './config/db.js'; // seu Pool do pg
 import app from './bootstrap/app.js';
-import sequelize from './public/index.js'; 
 
 async function startServer() {
   try {
-    await sequelize.authenticate();
+    // Testa a conexão com o banco:
+    await db.query('SELECT 1');
     console.log('Conexão com o banco de dados estabelecida com sucesso.');
-
-    await sequelize.sync();
-    console.log('Tabelas sincronizadas.');
 
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {

@@ -28,3 +28,18 @@ export async function create(req, res) {
     res.status(400).json({ error: 'Erro ao criar responsável' });
   }
 }
+
+export async function update(req, res) {
+  try {
+    const id = req.params.id;
+    const [updated] = await Responsavel.update(req.body, { where: { id } });
+    if (updated) {
+      const updatedResponsavel = await Responsavel.findByPk(id);
+      res.json(updatedResponsavel);
+    } else {
+      res.status(404).json({ error: 'Responsável não encontrado' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao atualizar responsável' });
+  }
+}

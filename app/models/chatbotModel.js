@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../config/sequelize.js');
+import { DataTypes } from 'sequelize';
+import sequelize from '../../config/sequelize.js';
 
 const Chatbot = sequelize.define('Chatbot', {
   pergunta: {
@@ -12,4 +12,5 @@ const Chatbot = sequelize.define('Chatbot', {
   }
 });
 
-module.exports = Chatbot;
+export default Chatbot;
+

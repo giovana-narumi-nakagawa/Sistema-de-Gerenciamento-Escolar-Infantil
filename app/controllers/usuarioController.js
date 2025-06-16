@@ -28,3 +28,18 @@ export async function create(req, res) {
     res.status(400).json({ error: 'Erro ao criar usuário' });
   }
 }
+
+export async function update(req, res) {
+  try {
+    const id = req.params.id;
+    const [updated] = await Usuario.update(req.body, { where: { id } });
+    if (updated) {
+      const updatedUsuario = await Usuario.findByPk(id);
+      res.json(updatedUsuario);
+    } else {
+      res.status(404).json({ error: 'Usuário não encontrado' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao atualizar usuário' });
+  }
+}
