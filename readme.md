@@ -88,6 +88,7 @@ Depois da build, inicie os containers com:
 ```sh
 docker compose up
 ```
+Antes do próximo passo, aguarde carregar totalmente, e em seguida, aperte as teclas ctrl + c
 
 Se quiser rodar os containers em segundo plano:
 ```sh
