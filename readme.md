@@ -2,7 +2,7 @@
 O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objetivo de facilitar o gerenciamento de informações relacionadas a alunos, turmas, professores e atividades escolares.
 
 
-## Instalação:
+## Como abrir o repositório na sua máquina
 1. Clonar o repositório:
 
    ```sh
@@ -128,7 +128,7 @@ Caso apareça a versão do Docker, a instalação deu certo.
 
 ## Como usar:
 Pré-requisitos:
-Ter o Docker e o Docker Compose instalados na máquina.
+Ter o Docker , Docker Compose e o MondoDB instalados na máquina.
 
 Passo 1: Construindo as Imagens Docker
 Dentro da raiz do projeto (onde está o seu Dockerfile e docker-compose.yml), execute o seguinte comando para construir as imagens:
