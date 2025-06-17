@@ -1,19 +1,58 @@
-import db from './config/db.js'; // seu Pool do pg
-import app from './bootstrap/app.js';
+import express from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
 
-async function startServer() {
-  try {
-    // Testa a conexão com o banco:
-    await db.query('SELECT 1');
-    console.log('Conexão com o banco de dados estabelecida com sucesso.');
+// Carrega variáveis de ambiente
+dotenv.config();
 
-    const PORT = process.env.PORT || 3000;
-    app.listen(PORT, () => {
-      console.log(`Servidor rodando em http://localhost:${PORT}`);
-    });
-  } catch (error) {
-    console.error('Erro ao conectar com o banco de dados:', error);
-  }
-}
+const app = express();
+const port = process.env.PORT || 3000;
 
-startServer();
+// Conexão com o MongoDB
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('✅ Conectado ao MongoDB'))
+.catch(err => console.error('❌ Erro ao conectar no MongoDB:', err));
+
+// Middlewares globais
+app.use(cors());
+app.use(morgan('dev'));
+app.use(express.json());
+
+// Importação de rotas (com extensão .js obrigatória)
+import alunoRoutes from './routes/alunoRoutes.js';
+import usuarioRoutes from './routes/usuarioRoutes.js';
+import turmaRoutes from './routes/turmaRoutes.js';
+import atividadeRoutes from './routes/atividadeRoutes.js';
+import chatbotRoutes from './routes/chatbotRoutes.js';
+import responsavelRoutes from './routes/responsavelRoutes.js';
+import presencaRoutes from './routes/presencaRoutes.js';
+
+// Registro das rotas
+app.use('/api/alunos', alunoRoutes);
+app.use('/api/usuarios', usuarioRoutes);
+app.use('/api/turmas', turmaRoutes);
+app.use('/api/atividades', atividadeRoutes);
+app.use('/api/chatbot', chatbotRoutes);
+app.use('/api/responsaveis', responsavelRoutes);
+app.use('/api/presencas', presencaRoutes);
+
+// Rota base
+app.get('/', (req, res) => {
+  res.send('🎓 API da escola funcionando');
+});
+
+// Middleware de erro global
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ erro: 'Erro interno do servidor' });
+});
+
+// Inicia o servidor
+app.listen(port, () => {
+  console.log(`🚀 Servidor rodando na porta ${port}`);
+});

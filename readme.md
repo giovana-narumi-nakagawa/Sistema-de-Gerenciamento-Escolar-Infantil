@@ -79,19 +79,19 @@ Passo 1: Construindo as Imagens Docker
 Dentro da raiz do projeto (onde está o seu Dockerfile e docker-compose.yml), execute o seguinte comando para construir as imagens:
 
 ```sh
-docker-compose build
+docker compose build
 ```
 
 Passo 2: Subindo os Containers (Backend + Banco de Dados)
 Depois da build, inicie os containers com:
 
 ```sh
-docker-compose up
+docker compose up
 ```
 
 Se quiser rodar os containers em segundo plano:
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 Passo 3: Verificar se o Backend está rodando

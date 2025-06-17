@@ -29,7 +29,7 @@ services:
       dockerfile: docker/Dockerfile-nginx
     container_name: escola-nginx
     ports:
-      - "80:80"
+      - "8080:80"
     depends_on:
       - app
     volumes:
