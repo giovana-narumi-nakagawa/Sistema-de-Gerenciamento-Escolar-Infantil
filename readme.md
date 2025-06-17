@@ -93,15 +93,20 @@ Se quiser rodar os containers em segundo plano:
 ```sh
 docker compose up -d
 ```
+Passo 3: Radar o servidor com:
+```sh
+node server.js
+```
 
-Passo 3: Verificar se o Backend está rodando
+
+Passo 4: Verificar se o Backend está rodando
 Por padrão, o backend ficará disponível em:
 
 ```sh
 http://localhost:3000/
 ```
 
-Passo 4: Interagindo com as Rotas da API
+Passo 5: Interagindo com as Rotas da API
 Temos alguns exemplos de como você pode testar as rotas usando um cliente HTTP, como por exemplo o Insomnia
 
 Recurso    Método    URL    Exemplo de Uso
