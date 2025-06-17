@@ -10,13 +10,10 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Conexão com o MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('✅ Conectado ao MongoDB'))
-.catch(err => console.error('❌ Erro ao conectar no MongoDB:', err));
+// Conexão com o MongoDB (sem opções deprecated)
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ Conectado ao MongoDB'))
+  .catch(err => console.error('❌ Erro ao conectar no MongoDB:', err));
 
 // Middlewares globais
 app.use(cors());
@@ -54,5 +51,5 @@ app.use((err, req, res, next) => {
 
 // Inicia o servidor
 app.listen(port, () => {
-  console.log(`🚀 Servidor rodando na porta ${port}`);
+  console.log(`🚀 Servidor rodando em http://localhost:${port}`);
 });
