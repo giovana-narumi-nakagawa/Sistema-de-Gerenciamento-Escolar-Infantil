@@ -4,4 +4,5 @@ ENV POSTGRES_DB=escola_infantil
 ENV POSTGRES_USER=postgres
 ENV POSTGRES_PASSWORD=admin
 
-COPY ./script.sql /docker-entrypoint-initdb.d/
+COPY script.sql /docker-entrypoint-initdb.d/
+
