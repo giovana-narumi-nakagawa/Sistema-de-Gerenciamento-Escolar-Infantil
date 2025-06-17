@@ -34,20 +34,75 @@ O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objeti
 
 ```plaintext
 Sistema-de-Gerenciamento-Escolar-Infantil/
-├── app/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
+📦 raiz-do-projeto
+├── 📁 app
+│   ├── 📁 controllers
+│   │   ├── alunoController.js
+│   │   ├── atividadeController.js
+│   │   ├── chatbotController.js
+│   │   ├── presencaController.js
+│   │   ├── responsavelController.js
+│   │   ├── turmaController.js
+│   │   └── usuarioController.js
+│   ├── 📁 middleware
+│   │   └── auth.js
+│   └── 📁 models
+│       ├── alunoModel.js
+│       ├── atividadeModel.js
+│       ├── chatbotModel.js
+│       ├── presencaModel.js
+│       ├── responsavelModel.js
+│       ├── turmaModel.js
+│       └── usuarioModel.js
+├── 📁 bootstrap
 │   └── app.js
-├── docs/
-│   ├── MER.png  (ou .pdf)
-│   └── DFD.png  (ou .pdf)
-├── sistema_escolar.sql
-├── Dockerfile
-├── DockerfileBanco
+├── 📁 config
+│   ├── constants.js
+│   ├── db.js
+│   ├── sequelize_relations.js
+│   ├── sequelize.js
+│   └── swagger.js
+├── 📁 docker
+│   ├── Dockerfile
+│   ├── Dockerfile-nginx
+│   └── Dockerfiledb
+├── 📁 docs
+│   ├── 01-loginDoc.js
+│   ├── 02-colaboradorDoc.js
+│   ├── 03-projetoDoc.js
+│   ├── 04-todoDoc.js
+│   ├── 05-colaboradorProjetoDoc.js
+│   └── 06-userDoc.js
+├── 📁 Mer e Der
+│   ├── der.jpg
+│   └── mer.jpg
+├── 📁 node_modules
+├── 📁 public
+│   └── index.js
+├── 📁 routes
+│   ├── 📁 api
+│   │   ├── api.js
+│   │   ├── routes.js
+│   │   └── web.js
+│   ├── alunoRoutes.js
+│   ├── atividadeRoutes.js
+│   ├── chatbotRoutes.js
+│   ├── presencaRoutes.js
+│   ├── responsavelRoutes.js
+│   ├── turmaRoutes.js
+│   └── usuarioRoutes.js
+├── .env
+├── .env.example
+├── .gitignore
 ├── docker-compose.yml
-└── README.md
+├── insomnia.yaml
+├── n-nginx.conf
+├── package.json
+├── package-lock.json
+├── readme.md
+├── script.sql
+├── server.js
+└── swaggerJson.js
 ```
 ## Como Instalar/Configurar:
 Guia de Instalação das Ferramentas Necessárias
