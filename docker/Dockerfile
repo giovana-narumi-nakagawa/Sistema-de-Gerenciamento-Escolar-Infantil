@@ -11,6 +11,7 @@ COPY app ./app
 COPY server.js ./
 COPY ./routes ./routes
 
+RUN npm install cors
 
 EXPOSE 3000
 
