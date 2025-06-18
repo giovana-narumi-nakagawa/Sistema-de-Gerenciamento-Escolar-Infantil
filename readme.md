@@ -232,5 +232,4 @@ Testes
 Sempre que possível, escreva testes para as funcionalidades adicionadas ou corrigidas.
 
 Garanta que os testes existentes continuem passando.
-## Licença:
-Este projeto está licenciado sob a licença MIT.
+
