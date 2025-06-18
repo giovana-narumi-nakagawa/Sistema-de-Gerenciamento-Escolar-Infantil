@@ -143,9 +143,9 @@ Depois da build, inicie os containers com:
 ```sh
 docker compose up
 ```
-Antes do próximo passo, aguarde carregar totalmente, e em seguida, aperte as teclas ctrl + c
+Antes do próximo passo, aguarde carregar totalmente, e em seguida, aperte as teclas ctrl + C
 
-Se quiser rodar os containers em segundo plano:
+Para rodar os containers em segundo plano:
 ```sh
 docker compose up -d
 ```
@@ -153,7 +153,6 @@ Passo 3: Radar o servidor com:
 ```sh
 node server.js
 ```
-
 
 Passo 4: Verificar se o Backend está rodando
 Por padrão, o backend ficará disponível em:
@@ -211,9 +210,6 @@ git push origin minha-feature
 Abra um Pull Request neste repositório principal, detalhando as alterações feitas.
 
 Para garantir uma experiência consistente e produtiva no desenvolvimento, recomendamos o uso do Visual Studio Code, que utilizamos para escrever e organizar o código do projeto.
-Extensões recomendadas
-ESLint — para garantir a padronização do código e identificar erros
-GitLens — para facilitar o trabalho com Git dentro do VS Code
 Docker — para gerenciar containers e imagens diretamente do editor
 PostgreSQL — para facilitar a conexão, visualização e gerenciamento do banco de dados PostgreSQL usado no projeto
 
