@@ -6,10 +6,7 @@ COPY package*.json ./
 
 RUN npm install --production
 
-COPY app ./app
-
-COPY server.js ./
-COPY ./routes ./routes
+COPY . .
 
 EXPOSE 3000
 
