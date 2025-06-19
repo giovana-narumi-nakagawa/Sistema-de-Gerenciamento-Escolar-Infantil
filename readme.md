@@ -62,6 +62,28 @@ Sistema-de-Gerenciamento-Escolar-Infantil/
 │   ├── sequelize_relations.js
 │   ├── sequelize.js
 │   └── swagger.js
+├── 📁 Core
+│   ├── getFilesWithContents.js
+│   ├── 📁 CommandCore
+│   │   ├── commandCliParams.js
+│   │   ├── createCommandManager.js
+│   │   ├── listCommands.js
+│   │   └── registerCommands.js
+│   ├── 📁 MigrationCore
+│   │   ├── getExecutedMigrations.js
+│   │   ├── getLastStep.js
+│   │   └── MigrationMaganer.js
+│   ├── 📁 QueueCore
+│   │   ├── createJob.js
+│   │   ├── createWorker.js
+│   │   ├── registerJobs.js
+│   │   └── resolveParams.js
+│   ├── 📁 RouteCore
+│   │   ├── getPathFromRegex.js
+│   │   └── recursiveGetRoutes.js
+│   └── 📁 SwaggerCore
+│       ├── createSwaggerDocs.js
+│       └── swaggerGenerate.js
 ├── 📁 docker
 │   ├── Dockerfile
 │   ├── Dockerfile-nginx
