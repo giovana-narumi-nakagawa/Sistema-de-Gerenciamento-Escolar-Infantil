@@ -152,14 +152,19 @@ Caso apareça a versão do Docker, a instalação deu certo.
 Pré-requisitos:
 Ter o Docker , Docker Compose e o MondoDB instalados na máquina.
 
-Passo 1: Construindo as Imagens Docker
+Passo 1: Instalar o npm e todas as suas dependências:
+```sh
+npm install
+```
+
+Passo 2: Construindo as Imagens Docker
 Dentro da raiz do projeto (onde está o seu Dockerfile e docker-compose.yml), execute o seguinte comando para construir as imagens:
 
 ```sh
 docker compose build
 ```
 
-Passo 2: Subindo os Containers (Backend + Banco de Dados)
+Passo 3: Subindo os Containers (Backend + Banco de Dados)
 Depois da build, inicie os containers com:
 
 ```sh
@@ -171,24 +176,25 @@ Para rodar os containers em segundo plano:
 ```sh
 docker compose up -d
 ```
-Passo 3: Instalar o npm e todas as suas dependências:
+
+Passo 4: Instalar o npm e todas as suas dependências:
 ```sh
 npm install
 ```
 
-Passo 4: Rodar o servidor com:
+Passo 5: Rodar o servidor com:
 ```sh
 node server.js
 ```
 
-Passo 5: Verificar se o Backend está rodando
+Passo 6: Verificar se o Backend está rodando
 Por padrão, o backend ficará disponível em:
 
 ```sh
 http://localhost:3000/
 ```
 
-Passo 6: Interagindo com as Rotas da API
+Passo 7: Interagindo com as Rotas da API
 Temos alguns exemplos de como você pode testar as rotas usando um cliente HTTP, como por exemplo o Insomnia
 
 Recurso    Método    URL    Exemplo de Uso
