@@ -1,13 +1,69 @@
-CREATE TABLE Usuario ( id_usuario SERIAL PRIMARY KEY, nome VARCHAR(100) NOT NULL, email VARCHAR(100) UNIQUE NOT NULL, tipo_usuario VARCHAR(50) NOT NULL );
+CREATE TABLE Usuario (
+    id_usuario INT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    tipo_usuario VARCHAR(50)
+);
 
-CREATE TABLE Responsavel ( id_responsavel SERIAL PRIMARY KEY, nome_completo VARCHAR(100) NOT NULL, telefone VARCHAR(20), email VARCHAR(100), endereco TEXT );
+CREATE TABLE Responsavel (
+    id_responsavel INT PRIMARY KEY,
+    nome_responsavel VARCHAR(100),
+    telefone_responsavel VARCHAR(20),
+    email_responsavel VARCHAR(100),
+    endereco_responsavel VARCHAR(200),
+    id_usuario INT,
+    FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario)
+);
 
-CREATE TABLE Chatbot_Interacao ( id_chatbot_interacao SERIAL PRIMARY KEY, id_responsavel INTEGER NOT NULL REFERENCES Responsavel(id_responsavel), mensagem_usuario TEXT NOT NULL, resposta_chatbot TEXT NOT NULL, data_hora TIMESTAMP NOT NULL );
+CREATE TABLE Chatbot_Interacao (
+    id_chatbot_interacao INT PRIMARY KEY,
+    id_responsavel INT,
+    mensagem_usuario TEXT,
+    resposta_chatbot TEXT,
+    data_hora TIMESTAMP,
+    FOREIGN KEY (id_responsavel) REFERENCES Responsavel(id_responsavel)
+);
 
-CREATE TABLE Turma ( id_turma SERIAL PRIMARY KEY, nome_turma VARCHAR(100) NOT NULL, horario VARCHAR(50), id_professor_responsavel INTEGER NOT NULL REFERENCES Usuario(id_usuario) );
+CREATE TABLE Professor (
+    id_professor INT PRIMARY KEY,
+    nome_professor VARCHAR(100),
+    materia VARCHAR(100),
+    endereco_professor VARCHAR(200)
+);
 
-CREATE TABLE Aluno ( id_aluno SERIAL PRIMARY KEY, nome_completo VARCHAR(100) NOT NULL, numero_matricula VARCHAR(50) UNIQUE NOT NULL, id_turma INTEGER NOT NULL REFERENCES Turma(id_turma), id_responsavel INTEGER NOT NULL REFERENCES Responsavel(id_responsavel) );
+CREATE TABLE Turma (
+    id_turma INT PRIMARY KEY,
+    nome_turma VARCHAR(100),
+    horario VARCHAR(50),
+    id_professor INT,
+    FOREIGN KEY (id_professor) REFERENCES Professor(id_professor)
+);
 
-CREATE TABLE Atividade ( id_atividade SERIAL PRIMARY KEY, descricao TEXT NOT NULL, data_realizacao DATE NOT NULL, id_turma INTEGER NOT NULL REFERENCES Turma(id_turma) );
+CREATE TABLE Aluno (
+    id_aluno INT PRIMARY KEY,
+    nome_aluno VARCHAR(100),
+    id_turma INT,
+    id_responsavel INT,
+    FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
+    FOREIGN KEY (id_responsavel) REFERENCES Responsavel(id_responsavel)
+);
 
-CREATE TABLE Presenca ( id_presenca SERIAL PRIMARY KEY, id_aluno INTEGER NOT NULL REFERENCES Aluno(id_aluno), id_atividade INTEGER NOT NULL REFERENCES Atividade(id_atividade), presente BOOLEAN NOT NULL, data DATE NOT NULL );
+CREATE TABLE Atividade (
+    id_atividade INT PRIMARY KEY,
+    id_professor INT,
+    id_turma INT,
+    descricao TEXT,
+    data DATE,
+    FOREIGN KEY (id_professor) REFERENCES Professor(id_professor),
+    FOREIGN KEY (id_turma) REFERENCES Turma(id_turma)
+);
+
+CREATE TABLE Presenca (
+    id_presenca INT PRIMARY KEY,
+    id_aluno INT,
+    id_turma INT,
+    id_professor INT,
+    FOREIGN KEY (id_aluno) REFERENCES Aluno(id_aluno),
+    FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
+    FOREIGN KEY (id_professor) REFERENCES Professor(id_professor)
+);
