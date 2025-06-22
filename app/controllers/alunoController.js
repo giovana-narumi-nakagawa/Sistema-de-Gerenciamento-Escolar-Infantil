@@ -27,7 +27,6 @@ export async function create(req, res) {
   }
 }
 
-// Função update adicionada:
 export async function update(req, res) {
   try {
     const [updatedRows] = await Aluno.update(req.body, {

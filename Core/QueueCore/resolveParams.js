@@ -1,15 +1,8 @@
 import minimist from "minimist";
 
-/** Obter a fila e a concorrencia que o worker irá se conectar 
- * 1. Irá priorizar o parametro de terminal --queue
- * 2. Irá buscar a variável de ambiente RABBITMQ_QUEUE
- * 3. Irá conectar na fila default
- */
+
 export default () => {
 
-    /**
-     * Utiliza o minimist para transformar em objeto os parametro --[nome]=[valor]
-     */
     const [, , ...rawArgs] = process.argv;
     const args = minimist(rawArgs);
     delete args["_"];

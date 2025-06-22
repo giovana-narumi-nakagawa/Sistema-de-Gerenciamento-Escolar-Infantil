@@ -1,7 +1,7 @@
 import { Router } from 'express';
 const router = Router();
-import { getAll, getById, create, update } from '../app/controllers/responsavelController.js';
-import authMiddleware from '../app/middleware/auth.js';
+import { getAll, getById, create, update } from '../../app/controllers/usuarioController.js';
+import authMiddleware from '../../app/middleware/auth.js';
 
 router.use(authMiddleware);
 

@@ -4,6 +4,7 @@ import responsavelRoutes from '../routes/responsavelRoutes.js';
 import alunoRoutes from '../routes/alunoRoutes.js';
 import chatbotRoutes from '../routes/chatbotRoutes.js';
 import presencaRoutes from '../routes/presencaRoutes.js';
+import professorRoutes from '../routes/professorRoutes.js';
 import turmaRoutes from '../routes/turmaRoutes.js';
 import atividadeRoutes from '../routes/atividadeRoutes.js';
 
@@ -16,6 +17,7 @@ app.use('/responsaveis', responsavelRoutes);
 app.use('/alunos', alunoRoutes);
 app.use('/chatbot', chatbotRoutes);
 app.use('/presencas', presencaRoutes);
+app.use('/professores', professorRoutes)
 app.use('/turmas', turmaRoutes);
 app.use('/atividades', atividadeRoutes);
 

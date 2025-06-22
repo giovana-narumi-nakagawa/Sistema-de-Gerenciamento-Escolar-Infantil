@@ -1,12 +1,12 @@
-import DocumentoModel from "../app/Models/DocumentoModel.js";
-import UserModel from "../app/Models/UserModel.js";
+import presencaModel from "../app/models/presencaModel.js";
+import usuarioModel from "../app/models/usuarioModel.js";
 
-UserModel.hasMany(DocumentoModel, {
+UserModel.hasMany(presencaModel, {
     foreignKey: 'id_user',
     as: 'documentos'
 });
 
-DocumentoModel.belongsTo(UserModel, {
+DocumentoModel.belongsTo(usuarioModel, {
     foreignKey: 'id_user',
     as: 'user'
 });

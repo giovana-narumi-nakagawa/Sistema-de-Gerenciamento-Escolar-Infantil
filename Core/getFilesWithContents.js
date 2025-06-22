@@ -1,4 +1,3 @@
-// utils/getFiles.js
 import path from 'path';
 import { readdir } from 'fs/promises';
 import { pathToFileURL } from 'url';

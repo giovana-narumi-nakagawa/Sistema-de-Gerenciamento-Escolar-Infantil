@@ -1,8 +1,5 @@
 import getFilesWithContents from "../getFilesWithContents.js";
 
-/**
- * Iremos varrer o diretório e retornar um objeto com o nome do comando e seu handle
- */
 export default async function (dir) {
 
     const filesCommand = await getFilesWithContents(dir);

@@ -9,13 +9,14 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-import alunoRoutes from './routes/alunoRoutes.js';
-import usuarioRoutes from './routes/usuarioRoutes.js';
-import turmaRoutes from './routes/turmaRoutes.js';
-import atividadeRoutes from './routes/atividadeRoutes.js';
-import chatbotRoutes from './routes/chatbotRoutes.js';
-import responsavelRoutes from './routes/responsavelRoutes.js';
-import presencaRoutes from './routes/presencaRoutes.js';
+import alunoRoutes from './routes/api/alunoRoutes.js';
+import usuarioRoutes from './routes/api/usuarioRoutes.js';
+import turmaRoutes from './routes/api/turmaRoutes.js';
+import atividadeRoutes from './routes/api/atividadeRoutes.js';
+import chatbotRoutes from './routes/api/chatbotRoutes.js';
+import responsavelRoutes from './routes/api/responsavelRoutes.js';
+import presencaRoutes from './routes/api/presencaRoutes.js';
+import professorRoutes from './routes/api/professorRoutes.js';
 
 app.use('/api/alunos', alunoRoutes);
 app.use('/api/usuarios', usuarioRoutes);
