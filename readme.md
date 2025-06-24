@@ -36,31 +36,6 @@ O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objeti
 Sistema-de-Gerenciamento-Escolar-Infantil
 
 📦 raiz-do-projeto
-├── 📁 Core
-│   ├── 📁 CommandCore
-│   │   ├── commandCliParams.js
-│   │   ├── createCommandManager.js
-│   │   ├── listCommands.js
-│   │   └── registerCommands.js
-│   ├── 📁 MigrationCore
-│   │   ├── MigrationMaganer.js
-│   │   ├── getExecutedMigrations.js
-│   │   └── getLastStep.js
-│   ├── 📁 QueueCore
-│   │   ├── createJob.js
-│   │   ├── createWorker.js
-│   │   ├── registerJobs.js
-│   │   └── resolveParams.js
-│   ├── 📁 RouteCore
-│   │   ├── getPathFromRegex.js
-│   │   └── recursiveGetRoutes.js
-│   ├── 📁 SwaggerCore
-│       ├── createSwaggerDocs.js
-│       └── swaggerGenerate.js
-│   └── getFilesWithContents.js
-├── 📁 Mer e Der
-│   ├── Der.jpg
-│   └── Mer.jpg
 ├── 📁 app
 │   ├── 📁 controllers
 │   │   ├── alunoController.js
@@ -88,6 +63,28 @@ Sistema-de-Gerenciamento-Escolar-Infantil
 │   ├── sequelize.js
 │   ├── sequelize_relations.js
 │   └── swagger.js
+├── 📁 Core
+│   ├── 📁 CommandCore
+│   │   ├── commandCliParams.js
+│   │   ├── createCommandManager.js
+│   │   ├── listCommands.js
+│   │   └── registerCommands.js
+│   ├── 📁 MigrationCore
+│   │   ├── MigrationMaganer.js
+│   │   ├── getExecutedMigrations.js
+│   │   └── getLastStep.js
+│   ├── 📁 QueueCore
+│   │   ├── createJob.js
+│   │   ├── createWorker.js
+│   │   ├── registerJobs.js
+│   │   └── resolveParams.js
+│   ├── 📁 RouteCore
+│   │   ├── getPathFromRegex.js
+│   │   └── recursiveGetRoutes.js
+│   ├── 📁 SwaggerCore
+│       ├── createSwaggerDocs.js
+│       └── swaggerGenerate.js
+│   └── getFilesWithContents.js
 ├── 📁 docker
 │   ├── Dockerfile
 │   ├── Dockerfile-nginx
@@ -100,8 +97,8 @@ Sistema-de-Gerenciamento-Escolar-Infantil
 │   ├── 05-colaboradorProjetoDoc.js
 │   └── 06-userDoc.js
 ├── 📁 Mer e Der
-│   ├── der.jpg
-│   └── mer.jpg
+│   ├── Der.jpg
+│   └── Mer.jpg
 ├── 📁 node_modules
 ├── 📁 public
 │   └── index.js
