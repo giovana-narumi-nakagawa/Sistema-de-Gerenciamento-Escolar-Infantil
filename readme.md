@@ -35,6 +35,31 @@ O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objeti
 ```plaintext
 Sistema-de-Gerenciamento-Escolar-Infantil/
 📦 raiz-do-projeto
+├── 📁 Core
+│   ├── 📁 CommandCore
+│   │   ├── commandCliParams.js
+│   │   ├── createCommandManager.js
+│   │   ├── listCommands.js
+│   │   └── registerCommands.js
+│   ├── 📁 MigrationCore
+│   │   ├── MigrationMaganer.js
+│   │   ├── getExecutedMigrations.js
+│   │   └── getLastStep.js
+│   ├── 📁 QueueCore
+│   │   ├── createJob.js
+│   │   ├── createWorker.js
+│   │   ├── registerJobs.js
+│   │   └── resolveParams.js
+│   ├── 📁 RouteCore
+│   │   ├── getPathFromRegex.js
+│   │   └── recursiveGetRoutes.js
+│   ├── 📁 SwaggerCore
+│       ├── createSwaggerDocs.js
+│       └── swaggerGenerate.js
+│   └── getFilesWithContents.js
+├── 📁 Mer e Der
+│   ├── Der.jpg
+│   └── Mer.jpg
 ├── 📁 app
 │   ├── 📁 controllers
 │   │   ├── alunoController.js
@@ -59,31 +84,9 @@ Sistema-de-Gerenciamento-Escolar-Infantil/
 ├── 📁 config
 │   ├── constants.js
 │   ├── db.js
-│   ├── sequelize_relations.js
 │   ├── sequelize.js
+│   ├── sequelize_relations.js
 │   └── swagger.js
-├── 📁 Core
-│   ├── getFilesWithContents.js
-│   ├── 📁 CommandCore
-│   │   ├── commandCliParams.js
-│   │   ├── createCommandManager.js
-│   │   ├── listCommands.js
-│   │   └── registerCommands.js
-│   ├── 📁 MigrationCore
-│   │   ├── getExecutedMigrations.js
-│   │   ├── getLastStep.js
-│   │   └── MigrationMaganer.js
-│   ├── 📁 QueueCore
-│   │   ├── createJob.js
-│   │   ├── createWorker.js
-│   │   ├── registerJobs.js
-│   │   └── resolveParams.js
-│   ├── 📁 RouteCore
-│   │   ├── getPathFromRegex.js
-│   │   └── recursiveGetRoutes.js
-│   └── 📁 SwaggerCore
-│       ├── createSwaggerDocs.js
-│       └── swaggerGenerate.js
 ├── 📁 docker
 │   ├── Dockerfile
 │   ├── Dockerfile-nginx
@@ -103,16 +106,17 @@ Sistema-de-Gerenciamento-Escolar-Infantil/
 │   └── index.js
 ├── 📁 routes
 │   ├── 📁 api
-│   │   ├── api.js
-│   │   ├── routes.js
-│   │   └── web.js
-│   ├── alunoRoutes.js
-│   ├── atividadeRoutes.js
-│   ├── chatbotRoutes.js
-│   ├── presencaRoutes.js
-│   ├── responsavelRoutes.js
-│   ├── turmaRoutes.js
-│   └── usuarioRoutes.js
+│   │   ├── alunoRoutes.js
+│   │   ├── atividadeRoutes.js
+│   │   ├── chatbotRoutes.js
+│   │   ├── presencaRoutes.js
+│   │   ├── professorRoutes.js
+│   │   ├── responsavelRoutes.js
+│   │   ├── turmaRoutes.js
+│   │   └──  usuarioRoutes.js
+│   ├── api.js
+│   ├── routes.js
+│   ├── web.js
 ├── .env
 ├── .env.example
 ├── .gitignore
