@@ -33,7 +33,8 @@ O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objeti
 ## Estrutura do projeto:
 
 ```plaintext
-Sistema-de-Gerenciamento-Escolar-Infantil/
+Sistema-de-Gerenciamento-Escolar-Infantil
+
 📦 raiz-do-projeto
 ├── 📁 Core
 │   ├── 📁 CommandCore
@@ -129,6 +130,7 @@ Sistema-de-Gerenciamento-Escolar-Infantil/
 ├── script.sql
 ├── server.js
 └── swaggerJson.js
+
 ```
 ## Como Instalar/Configurar:
 Guia de Instalação das Ferramentas Necessárias
