@@ -1,3 +1,4 @@
+-- Criação das tabelas
 CREATE TABLE Usuario (
     id_usuario INT PRIMARY KEY,
     nome VARCHAR(100),
@@ -67,3 +68,39 @@ CREATE TABLE Presenca (
     FOREIGN KEY (id_turma) REFERENCES Turma(id_turma),
     FOREIGN KEY (id_professor) REFERENCES Professor(id_professor)
 );
+
+INSERT INTO Usuario (id_usuario, nome, email, tipo_usuario)
+VALUES 
+(1, 'Davi Campoi', 'davi@email.com', 'responsavel'),
+(2, 'Paulo Vinicius', 'vinicius@email.com', 'professor');
+
+INSERT INTO Responsavel (id_responsavel, nome_responsavel, telefone_responsavel, email_responsavel, endereco_responsavel, id_usuario)
+VALUES 
+(1, 'Davi Campoi', '11999999999', 'davi@email.com', 'Rua das Flores, 123', 1);
+
+INSERT INTO Professor (id_professor, nome_professor, materia, endereco_professor)
+VALUES 
+(1, 'Paulo Vinicius', 'Matemática', 'Av. Brasil, 456');
+
+INSERT INTO Turma (id_turma, nome_turma, horario, id_professor)
+VALUES 
+(1, 'Turma A', '08:00 - 10:00', 1);
+
+INSERT INTO Aluno (id_aluno, nome_aluno, id_turma, id_responsavel)
+VALUES 
+(1, 'Giovana Narumi', 1, 1),
+(2, 'Nicolas Henrique', 1, 1);
+
+INSERT INTO Atividade (id_atividade, id_professor, id_turma, descricao, data)
+VALUES 
+(1, 1, 1, 'Atividade de matemática básica', '2025-06-10'),
+(2, 1, 1, 'Prova de revisão', '2025-06-25');
+
+INSERT INTO Presenca (id_presenca, id_aluno, id_turma, id_professor)
+VALUES 
+(1, 1, 1, 1),
+(2, 2, 1, 1);
+
+INSERT INTO Chatbot_Interacao (id_chatbot_interacao, id_responsavel, mensagem_usuario, resposta_chatbot, data_hora)
+VALUES 
+(1, 1, 'Qual o horário da próxima reunião?', 'A próxima reunião será dia 30 às 18h.', NOW());
