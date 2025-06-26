@@ -1,4 +1,3 @@
--- Criação das tabelas
 CREATE TABLE Usuario (
     id_usuario INT PRIMARY KEY,
     nome VARCHAR(100),
