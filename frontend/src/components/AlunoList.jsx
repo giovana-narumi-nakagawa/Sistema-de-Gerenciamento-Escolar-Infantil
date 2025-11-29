@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../api/api';
+import { Aluno } from "../services/aluno.types.ts";
 
 export default function AlunoList({ onEdit }) {
   const [alunos, setAlunos] = useState([]);

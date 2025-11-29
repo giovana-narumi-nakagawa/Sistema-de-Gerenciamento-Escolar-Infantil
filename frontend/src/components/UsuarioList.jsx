@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import api from '../api/api';
+import { Aluno } from "../services/usuario.types.ts";
 
 export default function UsuarioList({ onEdit }) {
   const [usuarios, setUsuarios] = useState([]);

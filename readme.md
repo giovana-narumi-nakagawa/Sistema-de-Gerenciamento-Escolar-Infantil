@@ -15,20 +15,39 @@ O projeto consiste em um Sistema de Gerenciamento Escolar Infantil, com o objeti
    cd Sistema-de-Gerenciamento-Escolar-Infantil
    ```
 ## Tecnologias utilizadas
+- Front-end (Prova Final)
 
-- Linguagem: Node.js (JavaScript)
+React + TypeScript (.tsx / .ts)
 
-- Framework: Express.js
+Vite (pré-compilador)
 
-- Banco de Dados: PostgreSQL
+Axios (requisições HTTP)
 
-- ORM: Sequelize (ou outro, dependendo do que usaram)
+React Router DOM (roteamento)
 
-- Ambiente de Containerização: Docker e Docker Compose
+WebSocket API nativa
 
-- Servidor Web: Nginx (proxy reverso)
+Custom Hook (useWebSocket)
 
-- Outros: Dotenv, Nodemon, entre outras bibliotecas NPM
+EJS (views obrigatórias da prova)
+
+- Back-end (já desenvolvido no semestre anterior)
+
+Node.js (JavaScript)
+
+Express.js (framework principal)
+
+PostgreSQL (banco de dados relacional)
+
+Sequelize (ORM)
+
+Docker & Docker Compose (containerização)
+
+Nginx (proxy reverso)
+
+Dotenv (variáveis de ambiente)
+
+Nodemon (hot reload em desenvolvimento)
 
 ## Estrutura do projeto:
 
