@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AlunoForm from '../components/AlunoForm';
 import AlunoList from '../components/AlunoList';
 import api from '../api/api';
+import { Chat } from '../components/Chat'; 
 
 export default function Alunos() {
   const [alunoSelecionado, setAlunoSelecionado] = useState(null);
@@ -19,6 +20,10 @@ export default function Alunos() {
     <div>
       <AlunoForm onSubmit={handleSubmit} alunoSelecionado={alunoSelecionado} />
       <AlunoList onEdit={setAlunoSelecionado} />
+      
+      {/* Chat em tempo real */}
+      <Chat />
     </div>
   );
 }
+

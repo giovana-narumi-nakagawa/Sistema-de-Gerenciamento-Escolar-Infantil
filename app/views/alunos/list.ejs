@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Alunos</title>
+</head>
+<body>
+    <h1>Alunos</h1>
+    <a href="/alunos/create">Adicionar Aluno</a>
+    <ul>
+        <% if (Array.isArray(alunos) && alunos.length > 0) { %>
+            <% alunos.forEach(aluno => { %>
+                <li>
+                    <strong>Nome:</strong> <%= aluno.nome %> |
+                    <strong>Idade:</strong> <%= aluno.idade %> |
+                    <strong>Turma:</strong> <%= aluno.turma %>
+                    <a href="/alunos/edit/<%= aluno.id %>">Editar</a>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>Nenhum aluno cadastrado</li>
+        <% } %>
+    </ul>
+</body>
+</html>
+

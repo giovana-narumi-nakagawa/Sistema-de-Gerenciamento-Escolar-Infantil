@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Aluno</title>
+</head>
+<body>
+  <h1>Editar Aluno</h1>
+  <form action="/api/alunos/<%= aluno.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <label>Nome: <input type="text" name="nome" value="<%= aluno.nome %>" required></label><br>
+    <label>Idade: <input type="number" name="idade" value="<%= aluno.idade %>" required></label><br>
+    <button type="submit">Salvar</button>
+  </form>
+  <a href="/alunos/view">Voltar à lista</a>
+</body>
+</html>
