@@ -50,7 +50,7 @@ Nodemon (hot reload em desenvolvimento)
 
 ## Como usar:
 Pré-requisitos:
-Ter o Docker , Docker Compose e o MondoDB instalados na máquina.
+Ter o Docker , Docker Compose e o MongoDB instalados na máquina.
 
 Passo 1: Instalar o npm e todas as suas dependências:
 ```sh
@@ -89,13 +89,5 @@ http://localhost:3000/
 ```
 
 Passo 6: Interagindo com as Rotas da API
-Temos alguns exemplos de como você pode testar as rotas usando um cliente HTTP, como por exemplo o Insomnia
-
-Recurso    Método    URL    Exemplo de Uso
-Listar todos os alunos    GET    http://localhost:3000/alunos    Retorna lista de alunos
-
-Cadastrar novo aluno    POST    http://localhost:3000/alunos    Enviar JSON com os dados do aluno
-
-Atualizar um aluno    PUT    http://localhost:3000/alunos/%7Bid%7D    Atualiza aluno com ID específico
-
-Deletar um aluno    DELETE    http://localhost:3000/alunos/%7Bid%7D    Remove aluno com ID específico
+CRIAR ALUNO: 
+http://localhost:3000/alunos/create
