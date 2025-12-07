@@ -1,7 +1,10 @@
 # Sistema de gerenciamento escolar infantil
-Nessa etapa do projeto fizemos o front end do sistema iniciado no bimestre passado. Adicionamos views completas de CRUD para duas entidades já existentes na API.
+Repositório da interface front-end desenvolvida em React + TypeScript + Vite, consumindo a API REST do backend do grupo, com implementação de WebSocket e hook customizado.
 
-## Como abrir o repositório na sua máquina
+# Objetivo da Etapa
+Esta fase do projeto tem como objetivo desenvolver o front-end completo do Sistema de Gerenciamento Escolar Infantil, dando continuidade ao backend entregue no semestre anterior.
+
+# Instruções de execução
 1. Clonar o repositório:
 
    ```sh
@@ -13,6 +16,9 @@ Nessa etapa do projeto fizemos o front end do sistema iniciado no bimestre passa
    ```sh
    cd Sistema-de-Gerenciamento-Escolar-Infantil
    ```
+
+#Instruções de build (Vite).
+
 ## Tecnologias utilizadas
 - Front-end 
 
@@ -48,46 +54,23 @@ Dotenv (variáveis de ambiente)
 
 Nodemon (hot reload em desenvolvimento)
 
+#Entidades Escolhidas para o CRUD
+
+O grupo escolheu implementar o CRUD completo das seguintes entidades:
+
+- Alunos
+
+- Usuário
+
+# WebSocket
+O projeto utiliza um WebSocket para permitir comunicação em tempo real entre o front-end e o backend.
+Para organizar essa conexão, foi criado um hook customizado em React, chamado useWebSocket, que encapsula toda a lógica da conexão.
+
 ## Como usar:
 Pré-requisitos:
 Ter o Docker , Docker Compose e o MongoDB instalados na máquina.
 
-Passo 1: Instalar o npm e todas as suas dependências:
-```sh
-npm install
-```
+# Exemplos das rotas da API utilizadas.
 
-Passo 2: Construindo as Imagens Docker
-Dentro da raiz do projeto (onde está o seu Dockerfile e docker-compose.yml), execute o seguinte comando para construir as imagens:
-
-```sh
-docker compose build
-```
-
-Passo 3: Subindo os Containers (Backend + Banco de Dados)
-Depois da build, inicie os containers com:
-
-```sh
-docker compose up
-```
-Antes do próximo passo, aguarde carregar totalmente, e em seguida, aperte as teclas ctrl + C
-
-Para rodar os containers em segundo plano:
-```sh
-docker compose up -d
-```
-Passo 4: Rodar o servidor com:
-```sh
-node server.js
-```
-
-Passo 5: Verificar se o Backend está rodando
-Por padrão, o backend ficará disponível em:
-
-```sh
-http://localhost:3000/
-```
-
-Passo 6: Interagindo com as Rotas da API
 CRIAR ALUNO: 
 http://localhost:3000/alunos/create
