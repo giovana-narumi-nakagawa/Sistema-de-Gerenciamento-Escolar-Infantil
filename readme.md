@@ -57,7 +57,7 @@ http://localhost:3000/alunos/create
 http://localhost:3000/usuarios/create
 ```
 
-#Instruções de build (Vite).
+# Instruções de build (Vite).
 1. Baixe as dependências:
    
 ```sh
