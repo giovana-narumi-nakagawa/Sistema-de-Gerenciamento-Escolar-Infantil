@@ -29,32 +29,20 @@ docker compose up --build
 http://localhost:3000/alunos
 ```
 
-Instruções de build com o Node:
+Ou, se preferir, utilize o Node ou o Vite:
 
-Primeiro, na raiz da pasta pelo terminal, baixe o node-fetch:
+# Instruções de build com o Node:
+
+1. Na raiz da pasta pelo terminal, baixe o node-fetch:
 
 ```sh
 pip install node-fetch
 ```
 
-Em seguida, rode:
+2. Em seguida, rode:
 
 ```sh
 node server.js
-```
-
-# Portas usadas:
-
-1.Criar Aluno:
-
-```sh
-http://localhost:3000/alunos/create
-```
-
-2. Criar Usuario:
-   
-  ```sh
-http://localhost:3000/usuarios/create
 ```
 
 # Instruções de build (Vite).
@@ -68,6 +56,20 @@ npm install
    
 ```sh
 npm run dev
+```
+
+# Portas usadas:
+
+1. Criar Aluno:
+
+```sh
+http://localhost:3000/alunos/create
+```
+
+2. Criar Usuario:
+   
+```sh
+http://localhost:3000/usuarios/create
 ```
 
 # Tecnologias utilizadas
@@ -105,7 +107,7 @@ Dotenv (variáveis de ambiente)
 
 Nodemon (hot reload em desenvolvimento)
 
-#Entidades Escolhidas para o CRUD
+# Entidades escolhidas para o CRUD
 
 O grupo escolheu implementar o CRUD completo das seguintes entidades:
 
