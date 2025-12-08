@@ -43,13 +43,32 @@ Em seguida, rode:
 node server.js
 ```
 
-A porta será a mesma, 
+# Portas usadas:
+
+1.Criar Aluno:
 
 ```sh
-http://localhost:3000/alunos
+http://localhost:3000/alunos/create
 ```
-  
+
+2. Criar Usuario:
+   
+  ```sh
+http://localhost:3000/usuarios/create
+```
+
 #Instruções de build (Vite).
+1. Baixe as dependências:
+   
+```sh
+npm install
+```
+
+2. Rode o Vite:
+   
+```sh
+npm run dev
+```
 
 ## Tecnologias utilizadas
 - Front-end 
@@ -97,8 +116,3 @@ O grupo escolheu implementar o CRUD completo das seguintes entidades:
 # WebSocket
 O projeto utiliza um WebSocket para permitir comunicação em tempo real entre o front-end e o backend.
 Para organizar essa conexão, foi criado um hook customizado em React, chamado useWebSocket, que encapsula toda a lógica da conexão.
-
-# Exemplos das rotas da API utilizadas.
-
-CRIAR ALUNO: 
-http://localhost:3000/alunos/create
