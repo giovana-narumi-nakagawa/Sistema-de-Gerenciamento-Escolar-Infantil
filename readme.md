@@ -16,7 +16,18 @@ Esta fase do projeto tem como objetivo desenvolver o front-end completo do Siste
    ```sh
    cd Sistema-de-Gerenciamento-Escolar-Infantil
    ```
+3. Com o Docker Desktop aberto, rode:
 
+ ```sh
+ docker compose up --build
+  ```
+
+4. Após executar o docker, acesse:
+
+ ```sh
+ http://localhost:3000/alunos
+  ```
+  
 #Instruções de build (Vite).
 
 ## Tecnologias utilizadas
