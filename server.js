@@ -15,8 +15,8 @@ app.set('views', path.join(process.cwd(), 'app/views'));
 
 // ---------------- ARMAZENAMENTO EM MEMÓRIA ----------------
 let alunos = [
-  { id: 1, nome: 'João' },
-  { id: 2, nome: 'Maria' }
+  { id: 1, nome: 'João', idade:6 },
+  { id: 2, nome: 'Maria', idade:86 }
 ];
 
 // ---------------- ROTAS API ----------------
