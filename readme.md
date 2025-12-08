@@ -70,7 +70,7 @@ npm install
 npm run dev
 ```
 
-## Tecnologias utilizadas
+# Tecnologias utilizadas
 - Front-end 
 
 React + TypeScript (.tsx / .ts)
