@@ -7,26 +7,47 @@ Esta fase do projeto tem como objetivo desenvolver o front-end completo do Siste
 # Instruções de execução
 1. Clonar o repositório:
 
-   ```sh
-   git clone https://github.com/giovana-narumi-nakagawa/Sistema-de-Gerenciamento-Escolar-Infantil.git
-   ```
+```sh
+git clone https://github.com/giovana-narumi-nakagawa/Sistema-de-Gerenciamento-Escolar-Infantil.git
+```
 
 2. Entrar na pasta do projeto:
 
-   ```sh
-   cd Sistema-de-Gerenciamento-Escolar-Infantil
-   ```
-3. Com o Docker Desktop aberto, rode:
+```sh
+cd Sistema-de-Gerenciamento-Escolar-Infantil
+```
+   
+3. Rode com o Docker:
 
- ```sh
- docker compose up --build
-  ```
+```sh
+docker compose up --build
+```
 
 4. Após executar o docker, acesse:
 
- ```sh
- http://localhost:3000/alunos
-  ```
+```sh
+http://localhost:3000/alunos
+```
+
+Instruções de build com o Node:
+
+Primeiro, na raiz da pasta pelo terminal, baixe o node-fetch:
+
+```sh
+pip install node-fetch
+```
+
+Em seguida, rode:
+
+```sh
+node server.js
+```
+
+A porta será a mesma, 
+
+```sh
+http://localhost:3000/alunos
+```
   
 #Instruções de build (Vite).
 
@@ -76,10 +97,6 @@ O grupo escolheu implementar o CRUD completo das seguintes entidades:
 # WebSocket
 O projeto utiliza um WebSocket para permitir comunicação em tempo real entre o front-end e o backend.
 Para organizar essa conexão, foi criado um hook customizado em React, chamado useWebSocket, que encapsula toda a lógica da conexão.
-
-## Como usar:
-Pré-requisitos:
-Ter o Docker , Docker Compose e o MongoDB instalados na máquina.
 
 # Exemplos das rotas da API utilizadas.
 
