@@ -26,7 +26,6 @@ export default function UsuarioList({ onEdit }) {
         {usuarios.map((usuario) => (
           <li key={usuario.id}>
             {usuario.nome} ({usuario.email}) [{usuario.tipo}]
-            <button onClick={() => onEdit(usuario)}>Editar</button>
             <button onClick={() => handleDelete(usuario.id)}>Excluir</button>
           </li>
         ))}
